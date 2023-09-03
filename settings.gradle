@@ -1,0 +1,4 @@
+rootProject.name = 'checku-server-v2'
+include 'api'
+include 'batch'
+include 'core'
