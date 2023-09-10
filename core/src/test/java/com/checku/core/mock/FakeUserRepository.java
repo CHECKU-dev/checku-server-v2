@@ -1,7 +1,7 @@
 package com.checku.core.mock;
 
 import com.checku.core.user.domain.User;
-import com.checku.core.user.infrastructure.UserRepository;
+import com.checku.core.user.service.port.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;

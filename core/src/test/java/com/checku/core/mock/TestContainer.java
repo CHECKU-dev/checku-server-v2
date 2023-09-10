@@ -1,7 +1,7 @@
 package com.checku.core.mock;
 
 import com.checku.core.user.application.UserCommandService;
-import com.checku.core.user.infrastructure.UserRepository;
+import com.checku.core.user.service.port.UserRepository;
 
 public class TestContainer {
     public final UserRepository userRepository;

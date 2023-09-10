@@ -2,7 +2,7 @@ package com.checku.core.user.application;
 
 import com.checku.core.user.domain.User;
 import com.checku.core.user.domain.UserCreateCommand;
-import com.checku.core.user.infrastructure.UserRepository;
+import com.checku.core.user.service.port.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
