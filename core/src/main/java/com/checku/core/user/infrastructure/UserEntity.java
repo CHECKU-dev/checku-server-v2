@@ -6,6 +6,7 @@ import com.checku.core.user.domain.User;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "users")
 public class UserEntity extends BaseTimeEntity {
 
     @Id
