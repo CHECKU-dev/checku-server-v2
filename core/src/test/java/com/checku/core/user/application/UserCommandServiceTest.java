@@ -8,18 +8,19 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.SoftAssertions.assertSoftly;
 
 class UserCommandServiceTest {
+    TestContainer testContainer = new TestContainer();
+    UserCommandService userCommandService = testContainer.userCommandService;
 
     @Test
     void UserCreateCommand로_User를_생성할_수_있다() {
         // given
-        TestContainer testContainer = new TestContainer();
         String pushToken = "testToken";
         UserCreateCommand userCreateCommand = UserCreateCommand.builder()
                 .pushToken(pushToken)
                 .build();
 
         // when
-        User user = testContainer.userCommandService.create(userCreateCommand);
+        User user = userCommandService.create(userCreateCommand);
 
         // then
         assertSoftly(softAssertions -> {
