@@ -6,6 +6,7 @@ import com.checku.core.mysubject.service.port.MySubjectRepository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 public class FakeMySubjectRepository implements MySubjectRepository {
 
@@ -19,6 +20,18 @@ public class FakeMySubjectRepository implements MySubjectRepository {
         } else {
             return updateMySubject(mySubject);
         }
+    }
+
+    @Override
+    public Optional<MySubject> findById(Long id) {
+        return mySubjects.stream()
+                .filter(item -> Objects.equals(item.getId(), id))
+                .findFirst();
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        mySubjects.removeIf(item -> Objects.equals(item.getId(), id));
     }
 
     private boolean isNewMySubject(MySubject mySubject) {
