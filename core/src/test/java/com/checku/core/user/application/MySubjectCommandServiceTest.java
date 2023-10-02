@@ -4,20 +4,17 @@ import com.checku.core.mock.TestContainer;
 import com.checku.core.mysubject.application.MySubjectCommandService;
 import com.checku.core.mysubject.domain.MySubject;
 import com.checku.core.mysubject.domain.MySubjectCreateCommand;
-import com.checku.core.mysubject.service.port.MySubjectRepository;
 import org.junit.jupiter.api.Test;
-
-import java.util.Optional;
 
 import static org.assertj.core.api.SoftAssertions.assertSoftly;
 
 class MySubjectCommandServiceTest {
-    TestContainer testContainer = new TestContainer();
-    MySubjectRepository mySubjectRepository = testContainer.mySubjectRepository;
-    MySubjectCommandService mySubjectCommandService = testContainer.mySubjectCommandService;
+
+    private final CoreTestContainer testContainer = new CoreTestContainer();
+    private final MySubjectCommandService mySubjectCommandService = testContainer.mySubjectCommandService;
 
     @Test
-    void MySubject를_생성할_수_있다() {
+    void MySubjectCreateCommand로_MySubject를_생성할_수_있다() {
         // given
         String subjectNumber = "test";
         Long userId = 1L;
