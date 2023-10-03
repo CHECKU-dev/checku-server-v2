@@ -1,10 +1,13 @@
 package com.checku.core.user.application;
 
-import com.checku.core.mock.TestContainer;
+import com.checku.core.mock.CoreTestContainer;
 import com.checku.core.mysubject.application.MySubjectCommandService;
 import com.checku.core.mysubject.domain.MySubject;
 import com.checku.core.mysubject.domain.MySubjectCreateCommand;
+import com.checku.core.mysubject.service.port.MySubjectRepository;
 import org.junit.jupiter.api.Test;
+
+import java.util.Optional;
 
 import static org.assertj.core.api.SoftAssertions.assertSoftly;
 
@@ -12,6 +15,7 @@ class MySubjectCommandServiceTest {
 
     private final CoreTestContainer testContainer = new CoreTestContainer();
     private final MySubjectCommandService mySubjectCommandService = testContainer.mySubjectCommandService;
+    private final MySubjectRepository mySubjectRepository = testContainer.mySubjectRepository;
 
     @Test
     void MySubjectCreateCommand로_MySubject를_생성할_수_있다() {
