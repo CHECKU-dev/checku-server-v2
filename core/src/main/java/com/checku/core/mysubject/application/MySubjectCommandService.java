@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityNotFoundException;
+
 @Service
 @RequiredArgsConstructor
 @Transactional
@@ -17,5 +19,10 @@ public class MySubjectCommandService {
     public MySubject create(MySubjectCreateCommand mySubjectCreateCommand) {
         MySubject mySubject = MySubject.create(mySubjectCreateCommand);
         return mySubjectRepository.save(mySubject);
+    }
+
+    public void delete(Long id) {
+        // 검증 로직 추가?
+        mySubjectRepository.deleteById(id);
     }
 }
