@@ -1,7 +1,6 @@
-package com.checku.core.user.application;
+package com.checku.core.subject.bookmark.application;
 
 import com.checku.core.mock.CoreTestContainer;
-import com.checku.core.subject.bookmark.application.SubjectBookmarkCommandService;
 import com.checku.core.subject.bookmark.domain.SubjectBookmark;
 import com.checku.core.subject.bookmark.domain.SubjectBookmarkCreateCommand;
 import com.checku.core.subject.bookmark.service.port.SubjectBookmarkRepository;

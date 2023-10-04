@@ -10,6 +10,6 @@ public class ApiTestContainer {
 
     public ApiTestContainer() {
         coreTestContainer = new CoreTestContainer();
-        this.userApi = new UserApi(coreTestContainer.userCommandService);
+        this.userApi = new UserApi(coreTestContainer.userCommandService, coreTestContainer.userQueryService);
     }
 }
