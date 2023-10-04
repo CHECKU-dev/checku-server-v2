@@ -2,11 +2,13 @@ package com.checku.core.user.infrastructure;
 
 import com.checku.core.common.infrastructure.BaseTimeEntity;
 import com.checku.core.user.domain.User;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "users")
+@EqualsAndHashCode(callSuper = true)
 public class UserEntity extends BaseTimeEntity {
 
     @Id
