@@ -10,6 +10,7 @@ public enum ErrorCode {
 
     // Common
     INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "C001", "Internal Server Error"),
+    ENTITY_NOT_FOUND(HttpStatus.NOT_FOUND, "C002", "Entity Not Found")
     ;
 
     private final HttpStatus httpStatus;

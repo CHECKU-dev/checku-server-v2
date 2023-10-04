@@ -1,6 +1,6 @@
 package com.checku.core.user.infrastructure;
 
-import com.checku.core.common.BaseTimeEntity;
+import com.checku.core.common.infrastructure.BaseTimeEntity;
 import com.checku.core.user.domain.User;
 
 import javax.persistence.*;
