@@ -6,12 +6,12 @@ import lombok.Getter;
 @Getter
 public class BookmarkCreateCommand {
 
-    private final String subjectNumber;
+    private final String courseNumber;
     private final Long userId;
 
     @Builder
-    private BookmarkCreateCommand(final String subjectNumber, final Long userId) {
-        this.subjectNumber = subjectNumber;
+    private BookmarkCreateCommand(final String courseNumber, final Long userId) {
+        this.courseNumber = courseNumber;
         this.userId = userId;
     }
 }

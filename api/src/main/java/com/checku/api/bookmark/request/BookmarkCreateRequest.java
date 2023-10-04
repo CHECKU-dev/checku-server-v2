@@ -14,11 +14,11 @@ import javax.validation.constraints.NotBlank;
 public class BookmarkCreateRequest {
 
     @NotBlank
-    private String subjectNumber;
+    private String courseNumber;
 
     public BookmarkCreateCommand toCreateCommand(Long userId) {
         return BookmarkCreateCommand.builder()
-                .subjectNumber(subjectNumber)
+                .courseNumber(courseNumber)
                 .userId(userId)
                 .build();
     }

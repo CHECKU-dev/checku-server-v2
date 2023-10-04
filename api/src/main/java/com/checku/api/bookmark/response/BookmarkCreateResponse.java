@@ -9,12 +9,12 @@ import lombok.Getter;
 public class BookmarkCreateResponse {
 
     private final Long bookmarkId;
-    private final String subjectNumber;
+    private final String courseNumber;
     private final Long userId;
 
     public BookmarkCreateResponse(final Bookmark bookmark) {
         this.bookmarkId = bookmark.getId();
-        this.subjectNumber = bookmark.getSubjectNumber();
+        this.courseNumber = bookmark.getCourseNumber();
         this.userId = bookmark.getUserId();
     }
 }

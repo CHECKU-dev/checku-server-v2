@@ -12,13 +12,13 @@ import java.time.LocalDateTime;
 public class Bookmark extends BaseTime {
 
     private final Long id;
-    private final String subjectNumber;
+    private final String courseNumber;
     private final Long userId;
 
     @Builder
-    private Bookmark(final Long id, final String subjectNumber, final Long userId, final LocalDateTime createdAt, final LocalDateTime updatedAt) {
+    private Bookmark(final Long id, final String courseNumber, final Long userId, final LocalDateTime createdAt, final LocalDateTime updatedAt) {
         this.id = id;
-        this.subjectNumber = subjectNumber;
+        this.courseNumber = courseNumber;
         this.userId = userId;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
@@ -26,7 +26,7 @@ public class Bookmark extends BaseTime {
 
     public static Bookmark create(final BookmarkCreateCommand bookmarkCreateCommand) {
         return Bookmark.builder()
-                .subjectNumber(bookmarkCreateCommand.getSubjectNumber())
+                .courseNumber(bookmarkCreateCommand.getCourseNumber())
                 .userId(bookmarkCreateCommand.getUserId())
                 .build();
     }

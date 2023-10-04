@@ -9,10 +9,10 @@ class BookmarkTest {
     @Test
     void BookmarkCreateCommand로_Bookmark를_생성할_수_있다() {
         // given
-        String subjectNumber = "0001";
+        String courseNumber = "0001";
         Long userId = 1L;
         BookmarkCreateCommand createCommand = BookmarkCreateCommand.builder()
-                .subjectNumber(subjectNumber)
+                .courseNumber(courseNumber)
                 .userId(userId)
                 .build();
 
@@ -22,7 +22,7 @@ class BookmarkTest {
         // then
         assertSoftly(softAssertions -> {
             softAssertions.assertThat(bookmark.getId()).isNull();
-            softAssertions.assertThat(bookmark.getSubjectNumber()).isEqualTo(subjectNumber);
+            softAssertions.assertThat(bookmark.getCourseNumber()).isEqualTo(courseNumber);
             softAssertions.assertThat(bookmark.getUserId()).isEqualTo(userId);
             softAssertions.assertThat(bookmark.getCreatedAt()).isNull();
             softAssertions.assertThat(bookmark.getUpdatedAt()).isNull();

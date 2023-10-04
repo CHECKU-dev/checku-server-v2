@@ -18,7 +18,7 @@ class BookmarkQueryServiceTest {
     void Id로_Bookmark를_가져올_수_있다() {
         // given
         Bookmark savedBookmark = bookmarkRepository.save(Bookmark.create(BookmarkCreateCommand.builder()
-                .subjectNumber("0001")
+                .courseNumber("0001")
                 .userId(1L)
                 .build()));
 
