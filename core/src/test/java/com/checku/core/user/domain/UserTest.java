@@ -20,7 +20,7 @@ class UserTest {
         // then
         assertSoftly(softAssertions -> {
             softAssertions.assertThat(user.getId()).isNull();
-            softAssertions.assertThat(user.getPushToken()).hasToString(pushToken);
+            softAssertions.assertThat(user.getPushToken()).isEqualTo(pushToken);
             softAssertions.assertThat(user.getCreatedAt()).isNull();
             softAssertions.assertThat(user.getUpdatedAt()).isNull();
         });
