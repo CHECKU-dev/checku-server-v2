@@ -1,15 +1,16 @@
-package com.checku.core.mysubject.domain;
+package com.checku.core.subject.bookmark.domain;
 
 import lombok.Builder;
 import lombok.Getter;
 
 @Getter
-public class MySubjectCreateCommand {
+public class SubjectBookmarkCreateCommand {
+
     private final String subjectNumber;
     private final Long userId;
 
     @Builder
-    private MySubjectCreateCommand(String subjectNumber, Long userId) {
+    private SubjectBookmarkCreateCommand(final String subjectNumber, final Long userId) {
         this.subjectNumber = subjectNumber;
         this.userId = userId;
     }
