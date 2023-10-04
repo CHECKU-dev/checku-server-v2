@@ -18,8 +18,8 @@ public class BookmarkEntity extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "subject_number", nullable = false)
-    private String subjectNumber;
+    @Column(name = "course_number", nullable = false)
+    private String courseNumber;
 
     @Column(name = "user_id")
     private Long userId;
@@ -27,7 +27,7 @@ public class BookmarkEntity extends BaseTimeEntity {
     public Bookmark toModel() {
         return Bookmark.builder()
                 .id(id)
-                .subjectNumber(subjectNumber)
+                .courseNumber(courseNumber)
                 .userId(userId)
                 .createdAt(createdAt)
                 .updatedAt(updatedAt)
@@ -37,7 +37,7 @@ public class BookmarkEntity extends BaseTimeEntity {
     public static BookmarkEntity from(final Bookmark bookmark) {
         BookmarkEntity bookmarkEntity = new BookmarkEntity();
         bookmarkEntity.id = bookmark.getId();
-        bookmarkEntity.subjectNumber = bookmark.getSubjectNumber();
+        bookmarkEntity.courseNumber = bookmark.getCourseNumber();
         bookmarkEntity.userId = bookmark.getUserId();
         bookmarkEntity.createdAt = bookmark.getCreatedAt();
         bookmarkEntity.updatedAt = bookmark.getUpdatedAt();

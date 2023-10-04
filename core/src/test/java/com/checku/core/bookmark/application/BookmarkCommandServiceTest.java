@@ -22,10 +22,10 @@ class BookmarkCommandServiceTest {
     @Test
     void BookmarkCreateCommand로_Bookmark를_생성할_수_있다() {
         // given
-        String subjectNumber = "0001";
+        String courseNumber = "0001";
         Long userId = 1L;
         BookmarkCreateCommand bookmarkCreateCommand = BookmarkCreateCommand.builder()
-                .subjectNumber(subjectNumber)
+                .courseNumber(courseNumber)
                 .userId(userId)
                 .build();
 
@@ -35,7 +35,7 @@ class BookmarkCommandServiceTest {
         // then
         assertSoftly(softAssertions -> {
             softAssertions.assertThat(bookmark.getId()).isEqualTo(1L);
-            softAssertions.assertThat(bookmark.getSubjectNumber()).isEqualTo(subjectNumber);
+            softAssertions.assertThat(bookmark.getCourseNumber()).isEqualTo(courseNumber);
             softAssertions.assertThat(bookmark.getUserId()).isEqualTo(userId);
         });
     }
@@ -43,10 +43,10 @@ class BookmarkCommandServiceTest {
     @Test
     void Id에_해당하는_Bookmark를_삭제할_수_있다() {
         // given
-        String subjectNumber = "0001";
+        String courseNumber = "0001";
         Long userId = 1L;
         BookmarkCreateCommand bookmarkCreateCommand = BookmarkCreateCommand.builder()
-                .subjectNumber(subjectNumber)
+                .courseNumber(courseNumber)
                 .userId(userId)
                 .build();
         Bookmark savedBookmark = bookmarkRepository.save(Bookmark.create(bookmarkCreateCommand));

@@ -19,15 +19,15 @@ class BookmarkApiTest {
     void BookmarkCreateRequest로_Bookmark를_생성할_수_있다() {
         // given
         Long userId = 1L;
-        String subjectNumber = "0001";
+        String courseNumber = "0001";
         BookmarkCreateResponse expectedCreateResponse = new BookmarkCreateResponse(Bookmark.builder()
                 .id(1L)
-                .subjectNumber(subjectNumber)
+                .courseNumber(courseNumber)
                 .userId(userId)
                 .build());
 
         // when
-        ResponseEntity<BookmarkCreateResponse> responseEntity = bookmarkApi.create(userId, new BookmarkCreateRequest(subjectNumber));
+        ResponseEntity<BookmarkCreateResponse> responseEntity = bookmarkApi.create(userId, new BookmarkCreateRequest(courseNumber));
 
         // then
         assertSoftly(softAssertions -> {
