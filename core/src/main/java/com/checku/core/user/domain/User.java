@@ -13,8 +13,6 @@ public class User extends BaseTime {
 
     private final Long id;
     private final String pushToken;
-    private final LocalDateTime createdAt;
-    private final LocalDateTime updatedAt;
 
     @Builder
     private User(final Long id, String pushToken, final LocalDateTime createdAt, LocalDateTime updatedAt) {
